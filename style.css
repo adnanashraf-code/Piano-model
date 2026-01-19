@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+#main h1 {
+  background: darkcyan;
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 20px;
+  font-family: sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: all 0.3s ease;
+}
+#main h1:hover {
+  background-color: rgb(86, 94, 209);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ffffff;
+}
+#main h2 {
+  background: crimson;
+  padding: 20px;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+#main .piano {
+  position: relative;
+  display: flex;
+}
+#main .piano .key {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: all 0.1s ease;
+}
+#main .piano .key.active {
+  transform: scale(0.95);
+  background: rgb(162, 162, 147);
+}
+#main .piano .white {
+  width: 60px;
+  height: 220px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  color: #000000;
+}
+#main .piano .black {
+  width: 40px;
+  height: 140px;
+  background: #000000;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+#main .piano .black[data-key=Cs] {
+  left: 45px;
+}
+#main .piano .black[data-key=Ds] {
+  left: 105px;
+}
+#main .piano .black[data-key=Fs] {
+  left: 225px;
+}
+#main .piano .black[data-key=Gs] {
+  left: 285px;
+}
+#main .piano .black[data-key=As] {
+  left: 345px;
+}
+#main .piano .black[data-key=Cs2] {
+  left: 465px;
+}
+#main .piano .black[data-key=Ds2] {
+  left: 525px;
+}/*# sourceMappingURL=style.css.map */

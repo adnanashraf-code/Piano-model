@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+$white: #ffffff;
+$black: #000000;
+
+#main {
+  height: 100%;
+  width: 100%;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+  h1 {
+    background: darkcyan;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    font-family: sans-serif;
+    user-select: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: rgb(86, 94, 209);
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #ffffff;
+    }
+  }
+
+  h2 {
+    background: crimson;
+    padding: 20px;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+
+  .piano {
+    position: relative;
+    display: flex;
+
+    .key {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.1s ease;
+    }
+
+    .key.active {
+      transform: scale(0.95);
+      background: rgb(162, 162, 147);
+    }
+
+    .white {
+      width: 60px;
+      height: 220px;
+      background: $white;
+      border: 1px solid $black;
+      color: $black;
+    }
+
+    .black {
+      width: 40px;
+      height: 140px;
+      background: $black;
+      position: absolute;
+      top: 0;
+      z-index: 2;
+
+      &[data-key="Cs"] {
+        left: 45px;
+      }
+      &[data-key="Ds"] {
+        left: 105px;
+      }
+      &[data-key="Fs"] {
+        left: 225px;
+      }
+      &[data-key="Gs"] {
+        left: 285px;
+      }
+      &[data-key="As"] {
+        left: 345px;
+      }
+
+      &[data-key="Cs2"] {
+        left: 465px;
+      }
+      &[data-key="Ds2"] {
+        left: 525px;
+      }
+    }
+  }
+}
