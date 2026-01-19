@@ -22,6 +22,7 @@ $black: #000000;
   align-items: center;
   justify-content: center;
   color: white;
+  overflow: hidden;
 
   h1 {
     background: darkcyan;
@@ -31,6 +32,7 @@ $black: #000000;
     font-family: sans-serif;
     user-select: none;
     transition: all 0.3s ease;
+    white-space: nowrap;
 
     &:hover {
       background-color: rgb(86, 94, 209);
