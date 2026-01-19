@@ -19,6 +19,7 @@ body {
   align-items: center;
   justify-content: center;
   color: white;
+  overflow: hidden;
 }
 #main h1 {
   background: darkcyan;
@@ -29,7 +30,9 @@ body {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  cursor: none;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 #main h1:hover {
   background-color: rgb(86, 94, 209);
